@@ -12,6 +12,7 @@ class WPWA User_Manager {
   public function __construct() {
     // 初期化コード
     register_activation_hook( __FILE__ , array( $this, 'add_application_user_roles' ) );
+    register_activation_hook( __FILE__, array( $this, 'remove_application_user_roles' ) );
   }
 
   // フォロワー、開発者、メンバー 3種類のユーザーロール
@@ -20,7 +21,14 @@ class WPWA User_Manager {
       add_role( 'developer', 'Developer', array( 'read' => true ) );
       add_role( 'member', 'Member', array( 'read' => true ) );
   }
-  
+
+  // 既存のユーザーロールを削除する
+  public function remove_application_user_roles() {
+      remove_role( 'author' );
+      remove_role( 'editor' );
+      remove_role( 'contributor' );
+      remove_role( 'subscriber' );
+  }
 }
 
 $user_manage = new WPWA_User_Manager();
