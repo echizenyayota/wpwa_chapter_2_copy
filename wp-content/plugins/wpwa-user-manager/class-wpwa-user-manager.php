@@ -13,6 +13,7 @@ class WPWA_User_Manager {
     // 初期化コード
     register_activation_hook( __FILE__ , array( $this, 'add_application_user_roles' ) );
     register_activation_hook( __FILE__, array( $this, 'remove_application_user_roles' ) );
+    register_activation_hook( __FILE__, array( $this, 'add_application_user_capabilities' ) );
   }
 
   // フォロワー、開発者、メンバー 3種類のユーザーロール
@@ -28,6 +29,13 @@ class WPWA_User_Manager {
       remove_role( 'editor' );
       remove_role( 'contributor' );
       remove_role( 'subscriber' );
+  }
+
+
+  // 最初の権限を与える
+  public function add_application_user_capabilities() {
+      $role = get_role( 'follower' );
+      $role->add_cap( 'follow_developer_activities' );
   }
 }
 
