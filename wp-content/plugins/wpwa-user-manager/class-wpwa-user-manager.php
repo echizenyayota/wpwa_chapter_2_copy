@@ -14,6 +14,7 @@ class WPWA_User_Manager {
     register_activation_hook( __FILE__ , array( $this, 'add_application_user_roles' ) );
     register_activation_hook( __FILE__, array( $this, 'remove_application_user_roles' ) );
     register_activation_hook( __FILE__, array( $this, 'add_application_user_capabilities' ) );
+    register_activation_hook( __FILE__, array( $this, 'flush_application_rewrite_rules' ) );
 
     add_action( 'init', array( $this, 'manage_user_routes' ) );
 
@@ -45,6 +46,11 @@ class WPWA_User_Manager {
   // ルーティングルールを作る
   public function manage_user_routes() {
       add_rewrite_rule( '^user/([^/]+)/?', 'index.php?control_action=$matches[1]', 'top' );
+  }
+
+  // リライトルールをフラッシュする
+  public function flush_application_rewrite_rules() {
+      flush_rewrite_rules();
   }
 
   // カスタムクエリ変数の追加
