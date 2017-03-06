@@ -2,3 +2,4 @@
 [01-Mar-2017 05:56:24 UTC] PHP Parse error:  syntax error, unexpected 'User_Manager' (T_STRING), expecting '{' in /var/www/wordpress/wp-content/plugins/wpwa-user-manager/class-wpwa-user-manager.php on line 11
 [01-Mar-2017 05:56:24 UTC] PHP Parse error:  syntax error, unexpected 'User_Manager' (T_STRING), expecting '{' in /var/www/wordpress/wp-content/plugins/wpwa-user-manager/class-wpwa-user-manager.php on line 11
 [06-Mar-2017 08:58:08 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'WPWA_User_Manager' does not have a method 'manage_user_routes' in /var/www/wordpress/wp-includes/class-wp-hook.php on line 298
+[06-Mar-2017 11:34:08 UTC] PHP Warning:  不明なエラーが発生しました。WordPress.org またはこのサーバーの設定に何か問題が起きている可能性があります。問題が解決しない場合は<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>に投稿してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /var/www/wordpress/wp-includes/update.php on line 320
