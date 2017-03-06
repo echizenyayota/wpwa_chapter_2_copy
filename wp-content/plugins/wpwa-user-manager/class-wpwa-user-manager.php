@@ -50,6 +50,7 @@ class WPWA_User_Manager {
 
   // リライトルールをフラッシュする
   public function flush_application_rewrite_rules() {
+      $this->manage_user_routes();
       flush_rewrite_rules();
   }
 
