@@ -14,7 +14,10 @@ class WPWA_User_Manager {
     register_activation_hook( __FILE__ , array( $this, 'add_application_user_roles' ) );
     register_activation_hook( __FILE__, array( $this, 'remove_application_user_roles' ) );
     register_activation_hook( __FILE__, array( $this, 'add_application_user_capabilities' ) );
+
     add_action( 'init', array( $this, 'manage_user_routes' ) );
+
+    add_filter( 'query_vars', array( $this, 'manage_user_routes_query_vars' ) );
   }
 
   // フォロワー、開発者、メンバー 3種類のユーザーロール
@@ -42,6 +45,12 @@ class WPWA_User_Manager {
   // ルーティングルールを作る
   public function manage_user_routes() {
       add_rewrite_rule( '^user/([^/]+)/?', 'index.php?control_action=$matches[1]', 'top' );
+  }
+
+  // カスタムクエリ変数の追加
+  public function manage_user_routes_query_vars( $query_vars ) {
+      $query_vars[] = 'control_action';
+      return $query_vars;
   }
 }
 
