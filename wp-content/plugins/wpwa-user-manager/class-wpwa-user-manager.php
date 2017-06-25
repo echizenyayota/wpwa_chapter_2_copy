@@ -39,7 +39,5 @@ class WPWA_User_Manager {
 
 }
 
-var_dump(__FILE__);
-exit;
 
 $user_manage = new WPWA_User_Manager();
