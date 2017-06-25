@@ -38,6 +38,7 @@ class WPWA_User_Manager {
       }
 
 }
+
 var_dump(__FILE__);
 exit;
 
