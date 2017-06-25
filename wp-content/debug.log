@@ -1,0 +1,6 @@
+[25-Jun-2017 03:30:50 UTC] PHP Parse error:  syntax error, unexpected 'User_Manager' (T_STRING), expecting '{' in /var/www/wordpress/wp-content/plugins/wpwa-user-manager/class-wpwa-user-manager.php on line 11
+[25-Jun-2017 03:31:18 UTC] PHP Parse error:  syntax error, unexpected 'User_Manager' (T_STRING), expecting '{' in /var/www/wordpress/wp-content/plugins/wpwa-user-manager/class-wpwa-user-manager.php on line 11
+[25-Jun-2017 03:32:02 UTC] PHP Parse error:  syntax error, unexpected 'User_Manager' (T_STRING), expecting '{' in /var/www/wordpress/wp-content/plugins/wpwa-user-manager/class-wpwa-user-manager.php on line 11
+[25-Jun-2017 03:32:04 UTC] PHP Parse error:  syntax error, unexpected 'User_Manager' (T_STRING), expecting '{' in /var/www/wordpress/wp-content/plugins/wpwa-user-manager/class-wpwa-user-manager.php on line 11
+[25-Jun-2017 03:34:57 UTC] PHP Parse error:  syntax error, unexpected 'User_Manager' (T_STRING), expecting '{' in /var/www/wordpress/wp-content/plugins/wpwa-user-manager/class-wpwa-user-manager.php on line 11
+[25-Jun-2017 03:36:40 UTC] PHP Parse error:  syntax error, unexpected 'User_Manager' (T_STRING), expecting '{' in /var/www/wordpress/wp-content/plugins/wpwa-user-manager/class-wpwa-user-manager.php on line 11
